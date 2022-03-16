@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+
+
+<body>
+    <a-scene
+      vr-mode-ui="enabled: false"
+      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"  >
+
+    <a-entity glb-model="https://github.com/sutilmetal/prueba-geo/blob/c27035c68ef4a00dbdd546436f75327a2f9cbe1c/copao.glb"
+    position="0 0 0"
+    look-at="[gps-camera]"
+    scale="100"
+    gps-entity-place="latitude: <-39.82578491535314>; longitude: <-73.2245156166379>;"
+    ></a-entity>
+
+    <a-entity camera position="0 0 0"></a-entity>
+
+    <a-camera gps-camera rotation-reader> </a-camera>
+
+
+    </a-scene>
+</body>
+</html>
